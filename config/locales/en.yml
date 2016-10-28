@@ -28,3 +28,11 @@ en:
   movie:
     deleted: "Movie have been deleted"
     created: "Movie have been created"
+  rate: "Rate: "
+  rates:
+    one_star: "One star"
+    two_star: "Two star"
+    three_star: "Three star"
+    four_star: "Four star"
+    five_star: "Five star"
+    

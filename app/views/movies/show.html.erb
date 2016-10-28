@@ -9,11 +9,14 @@
             <span class='dtreviewed'>Friday, October 21, 2016</span></span>
          </div>
       </div>
-      <div class="ndmv-review-breadcrumb-rating" >
+     <!--  <div class="ndmv-review-breadcrumb-rating" >
          <span class="rating" style='display:none;'>2.5</span>
          <h4>Rating:</h4>
          <div class="ndmv-movie-rating"><span class="rating-full"></span><span class="rating-full"></span><span class="rating-half"></span><span class="rating-null"></span><span class="rating-null"></span></div>
-      </div>
+      </div> -->
+      <span class="rate">
+        Movie rate <%= @movie.rates.average :vote %>
+      </span><br>
    </div>
 </section>
 <div class="container ndmv-main-container">
@@ -72,6 +75,11 @@
            </div>
            <% if user_signed_in? %>
              <%= render 'shared/comment_form', movie: @movie %>
+             <% unless current_user.has_voted @movie %>
+               <% @votes.each do |key, value| %>
+                 <%= render "shared/rate_form", key: key %>
+               <% end %>
+             <% end %>
            <% end %>  
          </div>
          <!--  adblocker taboola -->

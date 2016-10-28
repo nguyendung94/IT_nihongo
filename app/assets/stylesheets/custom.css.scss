@@ -232,3 +232,38 @@ body {
 text-area {
   height: auto;
 }
+
+/* rate */
+.td-rate{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  form{
+    width: 100%;
+    height: 100%;
+  }
+}
+#rate-1{
+  margin-left: 50px;
+}
+.star{
+  width: 100%;
+  height: 100%;
+  .rate-button{
+    position: absolute;
+    background-color: transparent !important;
+    border: none;
+    z-index: 9999;
+    width: 100%;
+    height: 100% !important;
+  }
+}
+.star::before{
+  position: absolute;
+  font-size: 40px;
+  left: 6px;
+  z-index: 1;
+}
+.color-hover{
+  color: yellow;
+}
